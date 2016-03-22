@@ -108,7 +108,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90500480689999996" green="0.90500480689999996" blue="0.90500480689999996" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="68S-ZZ-VAN" firstAttribute="baseline" secondItem="yqB-zT-3F2" secondAttribute="baseline" id="1cJ-7u-0BS"/>
                             <constraint firstItem="hn2-1l-iSl" firstAttribute="leading" secondItem="qIP-kP-ASQ" secondAttribute="leading" id="5pP-A3-hYf"/>
