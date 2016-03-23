@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RepositoryManager.h"
 
 @interface IssuesViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

@@ -60,38 +60,30 @@
     if (self.searchTextField.text!=nil || ![userName isEqualToString:@""]) {
         
         tableData = [[NSMutableArray alloc] init];
-        
+    
         NSURL *url = [[NSURL alloc] initWithString:[NSString stringWithFormat:@"https://api.github.com/users/%@/repos?",userName]];
         NSURLRequest *request = [[NSURLRequest alloc] initWithURL:url];
         
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
-                                             {
-                                                 NSArray *userRepos = JSON;
-                                                 for (int i=0; i<userRepos.count; i++)
-                                                 {
-                                                     NSDictionary *dict = [userRepos objectAtIndex:i];
-                                                     NSString *name = [dict objectForKey:@"name"];
-                                                     [tableData addObject:name];
-                                                 }
+        {
+            [[RepositoryManager sharedManager] getRepositoryData:JSON];
+            tableData = [[RepositoryManager sharedManager] userRepoData];
+            [self.repoTableView reloadData];
+            
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+            NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"User Not Found"
+                                                  message:@"Please Enter a Valid Username"
+                                                  preferredStyle:UIAlertControllerStyleAlert];
                                                  
-                                                 [self.repoTableView reloadData];
+            UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
+                                       style:UIAlertActionStyleDefault handler:nil];
                                                  
-                                             } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-                                                 NSLog(@"Request Failed with Error: %@, %@", error, error.userInfo);
-                                                 UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"User Not Found"
-                                                                                                                          message:@"Please Enter a Valid Username"
-                                                                                                                   preferredStyle:UIAlertControllerStyleAlert];
-                                                 
-                                                 UIAlertAction *actionOk = [UIAlertAction actionWithTitle:@"Ok"
-                                                                                                    style:UIAlertActionStyleDefault
-                                                                                                  handler:nil];
-                                                 
-                                                 [alertController addAction:actionOk];
-                                                 [self presentViewController:alertController animated:YES completion:nil];
-                                             }];
+            [alertController addAction:actionOk];
+            [self presentViewController:alertController animated:YES completion:nil];
+        }];
         
         [operation start];
-    
         
     }
 }

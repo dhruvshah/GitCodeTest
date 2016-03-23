@@ -24,6 +24,7 @@
 		1EC44BDA1CA1C65C004862B1 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC44BD01CA1C65C004862B1 /* AFXMLRequestOperation.m */; };
 		1EC44BDB1CA1C65C004862B1 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC44BD21CA1C65C004862B1 /* UIImageView+AFNetworking.m */; };
 		1EC44C1B1CA1DF00004862B1 /* IssuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EC44C1A1CA1DF00004862B1 /* IssuesViewController.m */; };
+		1EF3F0471CA24B7B008FA26D /* RepositoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF3F0461CA24B7B008FA26D /* RepositoryManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		1EC44BD21CA1C65C004862B1 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		1EC44C191CA1DF00004862B1 /* IssuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IssuesViewController.h; path = GitCodeTest/IssuesViewController.h; sourceTree = SOURCE_ROOT; };
 		1EC44C1A1CA1DF00004862B1 /* IssuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IssuesViewController.m; path = GitCodeTest/IssuesViewController.m; sourceTree = SOURCE_ROOT; };
+		1EF3F0451CA24B7B008FA26D /* RepositoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoryManager.h; sourceTree = "<group>"; };
+		1EF3F0461CA24B7B008FA26D /* RepositoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoryManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				1EC44B6B1CA1B9B5004862B1 /* AppDelegate.m */,
 				1EC44B6D1CA1B9B5004862B1 /* ViewController.h */,
 				1EC44B6E1CA1B9B5004862B1 /* ViewController.m */,
+				1EF3F0451CA24B7B008FA26D /* RepositoryManager.h */,
+				1EF3F0461CA24B7B008FA26D /* RepositoryManager.m */,
 				1EC44C191CA1DF00004862B1 /* IssuesViewController.h */,
 				1EC44C1A1CA1DF00004862B1 /* IssuesViewController.m */,
 				1EC44B701CA1B9B5004862B1 /* Main.storyboard */,
@@ -276,6 +281,7 @@
 				1EC44BD81CA1C65C004862B1 /* AFPropertyListRequestOperation.m in Sources */,
 				1EC44B6C1CA1B9B5004862B1 /* AppDelegate.m in Sources */,
 				1EC44C1B1CA1DF00004862B1 /* IssuesViewController.m in Sources */,
+				1EF3F0471CA24B7B008FA26D /* RepositoryManager.m in Sources */,
 				1EC44BD91CA1C65C004862B1 /* AFURLConnectionOperation.m in Sources */,
 				1EC44BDA1CA1C65C004862B1 /* AFXMLRequestOperation.m in Sources */,
 				1EC44BD61CA1C65C004862B1 /* AFJSONRequestOperation.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "IssuesViewController.h"
+#import "RepositoryManager.h"
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
