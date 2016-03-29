@@ -25,14 +25,18 @@
 
 - (id)init {
     if (self = [super init]) {
-        
+        userRepoData = [[NSMutableArray alloc] init];
+        issueData = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
 - (void)getRepositoryData:(NSArray*)userRepos{
     
-   userRepoData = [[NSMutableArray alloc] init];
+    if (userRepoData!=nil)
+    {
+        [userRepoData removeAllObjects];
+    }
     for (int i=0; i<userRepos.count; i++)
     {
         NSDictionary *dict = [userRepos objectAtIndex:i];
@@ -43,7 +47,10 @@
 
 - (void)getIssuesData:(NSArray*)userRepos{
     
-    issueData = [[NSMutableArray alloc] init];
+    if (issueData!=nil)
+    {
+        [issueData removeAllObjects];
+    }
     for (int i=0; i<userRepos.count; i++)
     {
         NSDictionary *dict = [userRepos objectAtIndex:i];
